@@ -66,8 +66,8 @@ public class COMP3005A3 {
         try (Connection conn = DriverManager.getConnection(url, user, password);
              PreparedStatement pstmt = conn.prepareStatement(SQL)) {
 
-            pstmt.setInt(1, student_id);
-            pstmt.setString(2, new_email);
+            pstmt.setInt(2, student_id);
+            pstmt.setString(1, new_email);
             pstmt.executeUpdate();
             System.out.println("Student email updated!");
 
@@ -139,4 +139,5 @@ public class COMP3005A3 {
         scanner.close();
     }
 }
+
 
